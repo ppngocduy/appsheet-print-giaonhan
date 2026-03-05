@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+    font-family: "Times New Roman";
+    font-size: 16px;
+    width: 800px;
+    margin: auto;
+}
+.center { text-align: center; }
+.bold { font-weight: bold; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+}
+.signature {
+    margin-top: 40px;
+    width: 100%;
+}
+.signature td {
+    border: none;
+    width: 50%;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="center bold">
+CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+</div>
+<div class="center">
+Độc lập – Tự do – Hạnh phúc
+</div>
+
+<div class="center bold" style="margin-top:20px;">
+BIÊN BẢN BÀN GIAO TÀI LIỆU
+</div>
+
+<p><b>BÊN GIAO:</b> <<[Chọn Người nhận]>></p>
+<p>Họ tên: <<[Chọn Người nhận]>></p>
+<p>Công ty: <<[Chọn Người nhận]>></p>
+
+<p><b>BÊN NHẬN:</b> <<[Chọn Người tạo]>></p>
+<p>Họ tên: <<[Chọn Người tạo]>></p>
+<p>Công ty: <<[Chọn Người tạo]>></p>
+
+<p><b>Chi tiết tài liệu bàn giao:</b></p>
+
+<table>
+<tr>
+<th>STT</th>
+<th>Mã gói thầu</th>
+<th>Nội dung</th>
+<th>Số lượng</th>
+<th>Ghi chú</th>
+</tr>
+
+<<Start: [Related LOC_DULIEU]>>
+<tr>
+<td><<[STT]>></td>
+<td><<[Magoithau]>></td>
+<td><<[NoiDung]>></td>
+<td><<[SoLuong]>></td>
+<td><<[GhiChu]>></td>
+</tr>
+<<End>>
+
+</table>
+
+<table class="signature">
+<tr>
+<td>
+<b>Bên giao</b><br>
+Ngày: <<TEXT([NgayLap],"DD/MM/YYYY")>>
+</td>
+<td>
+<b>Bên nhận</b><br>
+Ngày: <<TEXT([NgayLap],"DD/MM/YYYY")>>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
